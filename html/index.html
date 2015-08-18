@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+
+  <!-- Image-Mapster Plugin --> 
+  <script type="text/javascript" src="../js/maker/jquery.imagemapster.js"></script>
+
+  <!-- Tool Tipster's css -->
+  <link rel="stylesheet" type="text/css" href="../tooltipster/css/tooltipster.css"/>
+
+  <!-- Tool Tipster's JavaScript -->
+  <script type="text/javascript" src="../tooltipster/js/jquery.tooltipster.min.js"></script>
+
+  <!-- Angular CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+   <!-- Application's app.js --> 
+  <script type="text/javascript" src = "../js/app.js"></script> 
+
+  <style>
+    #one:hover{
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+<!--
+<div data-ng-app = "myApp" data-ng-controller="myCtrl">
+    <select data-ng-model="option1" data-ng-options="option for option in options1" data-ng-change="getOptions2()">
+    </select>
+    <select data-ng-model="option2" data-ng-options="option for option in options2">
+    </select>
+ </div>
+-->
+<div ng-app>
+  Type of Car: &nbsp <select onchange = "go()" id="mySelect" ng-model = "h1">
+    <option value="group1">Pickup
+    <option value="group2">Coupe
+    <option value="group3">Soccer Mom Van
+    <option value="group4">SUV
+  </select>
+   <br><br>
+  Brand of Car: &nbsp<select onchange = "go2()" id="mySelect2" ng-model = "h2" ng-hide = "!h1">
+    <option value="group1">Audi
+    <option value="group2">BMW
+    <option value="group3">Mercedes
+    <option value="group4">Volvo
+  </select>
+    <br><br>
+</div>
+
+<img id="Image-Maps-Com-image-maps-2015-08-13-174118" src="http://www.image-maps.com/m/private/0/levo9aoiqct1tr11hmdhblf342_imageedit_1_6735019806.jpg" border="0" width="998" height="1064" orgWidth="998" orgHeight="1064" usemap="#image-maps-2015-08-13-174118" alt="" />
+<map name="image-maps-2015-08-13-174118" id="ImageMapsCom-image-maps-2015-08-13-174118">
+
+<area class = "group1 tooltip" shape="rect" coords="996,1062,998,1064" alt="Image Map" style="outline:none;" title="County" href="http://www.image-maps.com/index.php?aff=mapped_users_57758" />
+
+<area class = "group1 tooltip" onmouseover = "console.log('Im County 8')"   alt="" title="County7"  shape="poly" coords="552,145,557,154,564,169,575,162,594,168,619,166,625,155,623,148" style="outline:none;" target="_self"     />
+
+<area class = "group1 tooltip"  onmouseover = "console.log('Im County 1')" alt="" title="County 1" href="http://www.image-maps.com/" shape="poly" coords="389,25,539,26,539,70,489,71,451,81,414,82,413,55,432,74,387,52" style="outline:none;" target="_self"     />
+
+<area class = "group2 tooltip" onmouseover = "console.log('Im County 2')" alt="" title="County 2" href="http://www.image-maps.com/" shape="poly" coords="900,26,899,72,798,75,799,54,779,52,778,27,829,63,866,60,881,62,819,29,818,51,840,52,857,56,867,58,787,28,815,50,832,60,850,59,862,55" style="outline:none;" target="_self"     />
+
+<area class = "group2 tooltip" onmouseover = "console.log('Im County 3')" alt="" title="County3" href="http://www.image-maps.com/" shape="poly" coords="531,398,394,367,377,438,432,455,503,430,470,468,456,461" style="outline:none;" target="_self"     />
+
+<area class = "group3 tooltip" onmouseover = "console.log('Im County 4')" alt="" title="This County" href="http://www.image-maps.com/" shape="poly" coords="695,876,696,772,724,770,729,804,772,809,773,859,772,877" style="outline:none;" target="_self"     />
+
+<area class = "group3 tooltip" onmouseover = "console.log('Im County 5')" alt="" title="County4" href="http://www.image-maps.com/" shape="poly" coords="783,383,782,456,900,457,913,382" style="outline:none;" target="_self"     />
+
+<area class = "group4 tooltip" onmouseover = "console.log('Im County 6')" alt="" title="County5" id = "tip2" href="http://www.image-maps.com/" shape="poly" coords="140,679,243,688,242,699,269,696,274,608,194,631" style="outline:none;" target="_self"     />
+
+<area class = "group4 tooltip" onmouseover = "console.log('Im County 7')" alt="" title = "County 8" href="http://www.image-maps.com/" shape="poly" coords="186,859,176,794,321,788,324,856" style="outline:none;" target="_self"     />
+
+</map>
+</body>
+</html>
+<script>
+  $(document).ready(function() {
+            
+	   $('#Image-Maps-Com-image-maps-2015-08-13-174118').mapster({
+	        fillOpacity: 0.4,
+	        render_select: {
+             fillColor: 'ff000c',
+             stroke: false,
+             altImage: '../img/blue.png',
+          },//End Render Object
+	    }) //End Mapster Object 
+
+     //Tooltipster
+    $('.tooltip').tooltipster({
+    });
+
+  });//End Doc Ready
+
+
+</script>
