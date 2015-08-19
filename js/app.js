@@ -19,3 +19,5 @@ function go2(){
         $('area.'+key).mapster('set',true);  
         current = key;       
      };
+
+
